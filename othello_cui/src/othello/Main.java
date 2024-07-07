@@ -7,10 +7,11 @@ public class Main {
 		Stone stone = new Stone();
 		Player player = new Player();
 		Turn turn = new Turn();
-		Board board = new Board(stone, player, turn);
+		NoWhere nowhere = new NoWhere();
+		Board board = new Board(stone, player, turn, nowhere);
 		Score score = new Score(board);
 		
-		Game game = new Game(input, stone, player, turn, board, score);
+		Game game = new Game(input, stone, player, turn, board, score, nowhere);
 		game.play();
 	}
 	

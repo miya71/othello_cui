@@ -4,14 +4,16 @@ public class Board {
 	Stone stone;
 	Player player;
 	Turn turn;
+	NoWhere nowhere;
 	
 	private String board[][] = new String[8][8];
 	private boolean changeFlag;
 	
-	public Board(Stone stone, Player player, Turn turn) {
+	public Board(Stone stone, Player player, Turn turn, NoWhere nowhere) {
 		this.stone = stone;
 		this.player = player;
 		this.turn = turn;
+		this.nowhere = nowhere;
 	}
 	public void reset() {
 		for(int i = 0; i < board.length; i++) {
@@ -46,6 +48,8 @@ public class Board {
 			setBoard(y, x, player.getMyColor());
 			stone.increaseStone();
 			turn.setTurnEndFlag(true);
+			// パスカウントをリセットする
+			nowhere.resetPassCount();
 		}else {
 			turn.setTurnEndFlag(false);
 			System.out.println("1つ以上の石をひっくり返してください。");
