@@ -1,7 +1,11 @@
 package othello;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Game {
-	Input input;
+	Scanner scanner = new Scanner(System.in);
+	
 	Stone stone;
 	Player player;
 	Turn turn;
@@ -9,8 +13,7 @@ public class Game {
 	Score score;
 	NoWhere nowhere;
 	
-	public Game(Input input, Stone stone, Player player, Turn turn, Board board, Score score, NoWhere nowhere) {
-		this.input = input;
+	public Game(Stone stone, Player player, Turn turn, Board board, Score score, NoWhere nowhere) {
 		this.stone = stone;
 		this.player = player;
 		this.turn = turn;
@@ -32,9 +35,9 @@ public class Game {
 				System.out.println("白の番です。");
 			}
 			System.out.println("上から何番目に置きますか。");
-			int y = input.inputY();
+			int y = inputY();
 			System.out.println("左から何番目に置きますか。");
-			int x = input.inputX();
+			int x = inputX();
 			if(y == 0 && x == 0) {
 				turn.setTurnEndFlag(true);
 				System.out.println("パスしました。");
@@ -85,6 +88,40 @@ public class Game {
 			}
 			System.out.println("");
 		}
+	}
+	private int inputY() {
+		int y;
+		while(true) {
+			try {
+				y = scanner.nextInt();
+				if(y < 0 || y > 8) {
+					System.out.println("盤面内の座標を指定してください。");
+					continue;
+				}
+				break;
+			} catch(InputMismatchException e) {
+				System.out.println("数字を入力してください。");
+				scanner.next();
+			}
+		}
+		return y;
+	}
+	private int inputX() {
+		int x;
+		while(true) {
+			try {
+				x = scanner.nextInt();
+				if(x < 0 || x > 8) {
+					System.out.println("盤面内の座標を指定してください。");
+					continue;
+				}
+				break;
+			} catch(InputMismatchException e) {
+				System.out.println("数字を入力してください。");
+				scanner.next();
+			}
+		}
+		return x;
 	}
 	
 }
