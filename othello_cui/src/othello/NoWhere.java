@@ -1,8 +1,8 @@
 package othello;
 
 public class NoWhere {
-	boolean noWhereFlag;
-	int passCount;
+	private boolean noWhereFlag;
+	private int passCount;
 	
 	public boolean getNoWhereFlag() {
 		if(passCount == 2) {

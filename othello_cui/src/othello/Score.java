@@ -3,8 +3,8 @@ package othello;
 public class Score {
 	Board board;
 	
-	int blackStone;
-	int whiteStone;
+	private int blackStone;
+	private int whiteStone;
 	
 	public Score(Board board) {
 		this.board = board;

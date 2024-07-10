@@ -1,7 +1,7 @@
 package othello;
 
 public class Turn {
-	boolean turnEndFlag;
+	private boolean turnEndFlag;
 	
 	public void setTurnEndFlag(boolean turnEndFlag) {
 		this.turnEndFlag = turnEndFlag;
