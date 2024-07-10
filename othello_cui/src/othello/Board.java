@@ -32,6 +32,9 @@ public class Board {
 	public String getBoard(int y, int x) {
 		return board[y][x];
 	}
+	public boolean getChangeFlag() {
+		return changeFlag;
+	}
 	public void putStone(int y, int x) {
 		y--;
 		x--;
@@ -52,7 +55,6 @@ public class Board {
 			nowhere.resetPassCount();
 		}else {
 			turn.setTurnEndFlag(false);
-			System.out.println("1つ以上の石をひっくり返してください。");
 		}
 	}
 	private void setBoard(int y, int x, String myColor) {

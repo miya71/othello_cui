@@ -49,6 +49,9 @@ public class Game {
 			if(turn.getTurnEndFlag()) {
 				player.changeColor();
 			}
+			if(board.getChangeFlag() == false) {
+				System.out.println("1つ以上の石をひっくり返してください。");
+			}
 			if(nowhere.getNoWhereFlag()) {
 				// パスカウントが2になったら（パスが2回続いたら）ゲーム終了
 				System.out.println("どちらも石を置けなかったので終了します。");
