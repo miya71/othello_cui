@@ -1,14 +1,14 @@
 package othello;
 
-public class NoWhere {
-	private boolean noWhereFlag;
+public class EndGame {
+	private boolean endGameFlag;
 	private int passCount;
 	
-	public boolean getNoWhereFlag() {
+	public boolean getEndGameFlag() {
 		if(passCount == 2) {
-			noWhereFlag = true;
+			endGameFlag = true;
 		}
-		return noWhereFlag;
+		return endGameFlag;
 	}
 	public void increasePassCount() {
 		passCount++;

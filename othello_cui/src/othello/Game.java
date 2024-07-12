@@ -11,15 +11,15 @@ public class Game {
 	Turn turn;
 	Board board;
 	Score score;
-	NoWhere nowhere;
+	EndGame endgame;
 	
-	public Game(Stone stone, Player player, Turn turn, Board board, Score score, NoWhere nowhere) {
+	public Game(Stone stone, Player player, Turn turn, Board board, Score score, EndGame endgame) {
 		this.stone = stone;
 		this.player = player;
 		this.turn = turn;
 		this.board = board;
 		this.score = score;
-		this.nowhere = nowhere;
+		this.endgame = endgame;
 	}
 	public void play() {
 		System.out.println("オセロゲームにようこそ。");
@@ -42,7 +42,7 @@ public class Game {
 				turn.setTurnEndFlag(true);
 				System.out.println("パスしました。");
 				// パスカウントを1増やす
-				nowhere.increasePassCount();
+				endgame.increasePassCount();
 			} else if(board.getBoard((y-1), (x-1)) != "none") {
 				turn.setTurnEndFlag(false);
 				System.out.println("既に石が置いてあります。");
@@ -55,7 +55,7 @@ public class Game {
 			if(board.getChangeFlag() == false) {
 				System.out.println("1つ以上の石をひっくり返してください。");
 			}
-			if(nowhere.getNoWhereFlag()) {
+			if(endgame.getEndGameFlag()) {
 				// パスカウントが2になったら（パスが2回続いたら）ゲーム終了
 				System.out.println("どちらも石を置けなかったので終了します。");
 				break;
