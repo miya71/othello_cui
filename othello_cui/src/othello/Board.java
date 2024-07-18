@@ -73,7 +73,7 @@ public class Board {
 						}
 						changeFlag = true;
 						break;
-					} else if(getBoard(y, x) == "none") {
+					} else if(getBoard(y, x).equals("none")) {
 						break;
 					}
 				}
@@ -93,7 +93,7 @@ public class Board {
 						}
 						changeFlag = true;
 						break;
-					} else if(getBoard(y, x) == "none") {
+					} else if(getBoard(y, x).equals("none")) {
 						break;
 					}
 				}
@@ -113,7 +113,7 @@ public class Board {
 						}
 						changeFlag = true;
 						break;
-					} else if(getBoard(y, x) == "none") {
+					} else if(getBoard(y, x).equals("none")) {
 						break;
 					}
 				}
@@ -133,7 +133,7 @@ public class Board {
 						}
 						changeFlag = true;
 						break;
-					} else if(getBoard(y, x) == "none") {
+					} else if(getBoard(y, x).equals("none")) {
 						break;
 					}
 				}
@@ -156,7 +156,7 @@ public class Board {
 						}
 						changeFlag = true;
 						break;
-					} else if(getBoard(y, x) == "none") {
+					} else if(getBoard(y, x).equals("none")) {
 						break;
 					}
 				}
@@ -179,7 +179,7 @@ public class Board {
 						}
 						changeFlag = true;
 						break;
-					} else if(getBoard(y, x) == "none") {
+					} else if(getBoard(y, x).equals("none")) {
 						break;
 					}
 				}
@@ -202,7 +202,7 @@ public class Board {
 						}
 						changeFlag = true;
 						break;
-					} else if(getBoard(y, x) == "none") {
+					} else if(getBoard(y, x).equals("none")) {
 						break;
 					}
 				}
@@ -225,7 +225,7 @@ public class Board {
 						}
 						changeFlag = true;
 						break;
-					} else if(getBoard(y, x) == "none") {
+					} else if(getBoard(y, x).equals("none")) {
 						break;
 					}
 				}

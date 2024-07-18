@@ -15,7 +15,7 @@ public class Player {
 		return enemyColor;
 	}
 	public void changeColor() {
-		if(myColor == "black") {
+		if(myColor.equals("black")) {
 			myColor = "white";
 			enemyColor = "black";
 		} else {

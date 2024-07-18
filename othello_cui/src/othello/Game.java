@@ -29,7 +29,7 @@ public class Game {
 			printBoard();
 			score.countScore();
 			System.out.println("黒：" + score.getBlackStone() + " 白：" + score.getWhiteStone());
-			if(player.getMyColor() == "black") {
+			if(player.getMyColor().equals("black")) {
 				System.out.println("黒の番です。");
 			} else {
 				System.out.println("白の番です。");
@@ -43,7 +43,7 @@ public class Game {
 				System.out.println("パスしました。");
 				// パスカウントを1増やす
 				endgame.increasePassCount();
-			} else if(board.getBoard((y-1), (x-1)) != "none") {
+			} else if(!(board.getBoard((y-1), (x-1)).equals("none"))) {
 				turn.setTurnEndFlag(false);
 				System.out.println("既に石が置いてあります。");
 			} else {
@@ -78,11 +78,11 @@ public class Game {
 		for(int i = 0; i < board.getBoard().length; i++) {
 			System.out.print((i + 1) + " ");
 			for(int j = 0; j < board.getBoard().length; j++) {
-				if(board.getBoard(i, j) == "black") {
+				if(board.getBoard(i, j).equals("black")) {
 					System.out.print("● ");
-				} else if(board.getBoard(i, j) == "white") {
+				} else if(board.getBoard(i, j).equals("white")) {
 					System.out.print("○ ");
-				} else if(board.getBoard(i,j) == "none"){
+				} else if(board.getBoard(i,j).equals("none")) {
 					System.out.print(": ");
 				}
 			}
