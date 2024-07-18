@@ -4,16 +4,16 @@ public class Board {
 	Stone stone;
 	Player player;
 	Turn turn;
-	EndGame endgame;
+	Pass pass;
 	
 	private String board[][] = new String[8][8];
 	private boolean changeFlag;
 	
-	public Board(Stone stone, Player player, Turn turn, EndGame endgame) {
+	public Board(Stone stone, Player player, Turn turn, Pass pass) {
 		this.stone = stone;
 		this.player = player;
 		this.turn = turn;
-		this.endgame = endgame;
+		this.pass = pass;
 	}
 	public void reset() {
 		for(int i = 0; i < board.length; i++) {
@@ -50,9 +50,8 @@ public class Board {
 		if(changeFlag) {
 			setBoard(y, x, player.getMyColor());
 			stone.increaseStone();
+			pass.resetPassCount();
 			turn.setTurnEndFlag(true);
-			// パスカウントをリセットする
-			endgame.resetPassCount();
 		}else {
 			turn.setTurnEndFlag(false);
 		}
