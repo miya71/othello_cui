@@ -1,8 +1,8 @@
 # ゲーム開始画面
-![othello_cui](https://github.com/miya71/othello_cui/assets/170975186/6db834d9-8c17-4fa5-9179-de382c933a26)  
+![othello_cui_1](https://github.com/user-attachments/assets/ffe829d0-b747-4239-8f3d-7ee1c4bc1768)
 # エラーメッセージ画面
-![othello_cui_1](https://github.com/miya71/othello_cui/assets/170975186/b95a9e64-2fd3-4cc9-8be4-02050febb30b)  
+![othello_cui_2](https://github.com/user-attachments/assets/31de1c77-fece-4f0d-b9b6-2340ace5a075)
 # パス実行画面
-![othello_cui_2](https://github.com/miya71/othello_cui/assets/170975186/02296c1e-0f68-4e63-a919-c7dffd21dffd)  
+![othello_cui_3](https://github.com/user-attachments/assets/63cca43f-f90f-4e90-a203-ee0fb66f288d)
 # ゲーム終了画面
-![othello_cui_3](https://github.com/miya71/othello_cui/assets/170975186/6ef6d40f-0ceb-4176-9d9e-5c24d6672448)  
+![othello_cui_4](https://github.com/user-attachments/assets/b9959861-681c-475e-953e-f2ac83e7c81a)
