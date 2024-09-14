@@ -22,8 +22,7 @@ public class Game {
 		this.pass = pass;
 	}
 	public void play() {
-		System.out.println("オセロゲームにようこそ。");
-		System.out.println("パスする場合は(0, 0)の座標を指定してください。");
+		System.out.println("オセロゲームを開始します。");
 		board.reset();
 		while(stone.getStone() < 64) {
 			printBoard();
@@ -34,10 +33,10 @@ public class Game {
 			} else {
 				System.out.println("白の番です。");
 			}
-			System.out.println("上から何番目に置きますか。");
-			int y = inputY();
-			System.out.println("左から何番目に置きますか。");
+			System.out.println("石を置くx軸を入力してください（1〜8、パスの場合は0）。");
 			int x = inputX();
+			System.out.println("石を置くy軸を入力してください（1〜8、パスの場合は0）。");
+			int y = inputY();
 			if(y == 0 && x == 0) {
 				turn.setTurnEndFlag(true);
 				System.out.println("パスしました。");
@@ -72,7 +71,7 @@ public class Game {
 	}
 	
 	private void printBoard() {
-		System.out.println("0 1 2 3 4 5 6 7 8 ");
+		System.out.println("  1 2 3 4 5 6 7 8 ");
 		for(int i = 0; i < board.getBoard().length; i++) {
 			System.out.print((i + 1) + " ");
 			for(int j = 0; j < board.getBoard().length; j++) {
@@ -86,23 +85,6 @@ public class Game {
 			}
 			System.out.println("");
 		}
-	}
-	private int inputY() {
-		int y;
-		while(true) {
-			try {
-				y = scanner.nextInt();
-				if(y < 0 || y > 8) {
-					System.out.println("盤面内の座標を指定してください。");
-					continue;
-				}
-				break;
-			} catch(InputMismatchException e) {
-				System.out.println("数字を入力してください。");
-				scanner.next();
-			}
-		}
-		return y;
 	}
 	private int inputX() {
 		int x;
@@ -121,5 +103,21 @@ public class Game {
 		}
 		return x;
 	}
-	
+	private int inputY() {
+		int y;
+		while(true) {
+			try {
+				y = scanner.nextInt();
+				if(y < 0 || y > 8) {
+					System.out.println("盤面内の座標を指定してください。");
+					continue;
+				}
+				break;
+			} catch(InputMismatchException e) {
+				System.out.println("数字を入力してください。");
+				scanner.next();
+			}
+		}
+		return y;
+	}
 }
