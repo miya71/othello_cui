@@ -4,14 +4,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Game {
-	Scanner scanner = new Scanner(System.in);
+	private Scanner scanner = new Scanner(System.in);
 	
-	Stone stone;
-	Player player;
-	Turn turn;
-	Board board;
-	Score score;
-	Pass pass;
+	private Stone stone;
+	private Player player;
+	private Turn turn;
+	private Board board;
+	private Score score;
+	private Pass pass;
 	
 	public Game(Stone stone, Player player, Turn turn, Board board, Score score, Pass pass) {
 		this.stone = stone;

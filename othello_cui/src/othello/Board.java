@@ -1,10 +1,10 @@
 package othello;
 
 public class Board {
-	Stone stone;
-	Player player;
-	Turn turn;
-	Pass pass;
+	private Stone stone;
+	private Player player;
+	private Turn turn;
+	private Pass pass;
 	
 	private String board[][] = new String[8][8];
 	private boolean changeFlag;

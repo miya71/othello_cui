@@ -1,7 +1,7 @@
 package othello;
 
 public class Score {
-	Board board;
+	private Board board;
 	
 	private int blackStone;
 	private int whiteStone;
